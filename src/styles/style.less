@@ -1,0 +1,105 @@
+@color1: #4d6194;
+@color2: #a4edfe;
+@color3: white;
+@main-font: 'Open Sans', sans-serif;
+body {
+  background-color: #fcf9cc;
+}
+.r-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.c-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  height: 260px;
+  background-image: url('/src/images/city.jpg');
+  h1 {
+    text-align: center;
+    color: @color1;
+    letter-spacing: 0.5em;
+  }
+}
+.parameters {
+  margin-top: 20px;
+  span {
+    font-family: @main-font;
+    font-size: 0.8em;
+  }
+}
+.flex-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  .forecast-today {
+    flex: 1;
+    background-color: @color1;
+    color: @color3;
+    align-items: center;
+    padding: 20px 5px;
+    .forecast-header {
+      margin-bottom: 10px;
+      font-family: 'Yusei Magic', sans-serif;
+      font-size: 1.5em;
+    }
+    .forecast-content {
+      display: flex;
+      flex-direction: column;
+      .degree {
+        .num {
+          align-items: center;
+          font-family: @main-font;
+          font-size: 1.3em;
+        }
+      }
+      .location {
+        text-align: center;
+        font-family: 'Fraunces', serif;
+        font-size: 2em;
+        margin: 10px;
+      }
+    }
+  }
+  .forecast {
+    align-items: center;
+    flex: 1;
+    color: @color1;
+    font-weight: bold;
+    padding: 20px 5px;
+    .forecast-header {
+      font-family: 'Yusei Magic', sans-serif;
+      font-size: 1.5em;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .detailed {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px 0;
+      .part {
+        align-items: center;
+        margin: 5px 4px;
+        font-family: @main-font;
+        font-size: 0.8em;
+        i {
+          margin-right: 1px;
+        }
+        small {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .forecast:nth-child(even) {
+    background-color: @color2;
+  }
+  .forecast:nth-child(odd) {
+    background-color: @color1;
+    color: @color3;
+  }
+}
